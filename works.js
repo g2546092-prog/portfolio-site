@@ -144,4 +144,6 @@ function showWeather(code) {
         icon.textContent = "☁";
         document.body.className = "weather-cloudy"
     }
+
+
 }
