@@ -26,9 +26,15 @@ header {
   height: 60px;
   top: 1;
   border-radius: 10px;
-  transform: translateY(-6px) scale(1.02); /* 浮き上がる */
-  opacity: 1; /* 元の opacity をリセット */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+header:hover {
+  transform: translateY(-6px) scale(1.02); /* 浮き上がる */
+  opacity: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 影 */
+}
+
  
 
 
