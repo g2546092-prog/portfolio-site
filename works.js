@@ -79,7 +79,12 @@ fetch("works.csv")
 
             grid.innerHTML = "";
 
+
+          
             filteredWorks.forEach(function(work) {
+
+                console.log("読み込もうとしている画像パス:./media/IMG_9018.JPG", work.image, "タイトル:寿司", work.title);
+                
                 var card = document.createElement("article");
                 card.className= "work-card";
                 card.innerHTML = 
