@@ -6,9 +6,9 @@ fetch("works.csv")
 
         var rows = data.trim().split("\n");
 
-        var headers = rows[0].split(",");
+        var headers = rows[0].split(",").map(function(h)  { return h.trim(); });
     
-        var works = rows.slice(1).map(function(row)  {
+        var works = rows.slice(1).map(function(row)  { 
 
             var values = row.split(",");
 

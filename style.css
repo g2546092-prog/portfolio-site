@@ -6,7 +6,7 @@ html{
 
 body {
   /*background: #130931;*/
-  background: linear-gradient(180deg, #0b0c10, #6196d7);
+  background: linear-gradient(360deg, #0b0c10, #233d5e, #6b4848);
   color: #f3dc7f;
   font-family: 'Zen Maru Gothic', sans-serif; /*文字フォント*/
 }
@@ -21,9 +21,11 @@ header {
   width: 100%;
   position: fixed;
   padding: 0px 30px;
-  background: #2c1361c0;
+  background: #606286c0;
+  color: #e5e5ee;
   height: 60px;
   top: 1;
+  border-radius: 5px;
 }
 nav {
   display: flex;
@@ -37,7 +39,7 @@ footer {
     font-size: 11px;
 }
 nav a:hover {
-    color: #f4ab3e;
+    color: #daba47;
 }
 #top {
    padding-top: 75px;
@@ -58,7 +60,8 @@ nav a:hover {
 }
 
 .work-card {
-    border: 1px solid #f7fa5b;
+    border: 2px solid #94b0d5d8;
+    border-radius: 2px ;
 }
 
 .work-card h4 {
@@ -84,12 +87,17 @@ nav a:hover {
 .works-controls select {
     padding: 10px;
     font-size: 16px;
+
+    background-color:#f8efb0e7 ; /*背景色*/
+    color: #24245e;
+    border: 1px solid #f8f5f5;
+    border-radius: 5px ; /*角の丸み*/
 }
 
 .work-category {
     font-size: 4px;
     padding-top: 14px;
-    color: #f4df24;
+    color: #6feef0;
 }
 
 .work-year {
@@ -175,4 +183,46 @@ body.weather-rainy #weather-icon {
                     
                 }
 
+    /* トップ（ファーストビュー）を中央寄せにする */
+#top {
+    text-align: center;      /* 文字を中央寄せ */
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+#top h1 {
+    font-size: 2.8rem;       /* 名前を大きく */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+#top h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+/* Aboutセクションカード風 */
+#about {
+    max-width: 600px;         /* ボックスの横幅 */
+    margin: 0 auto 60px;      /* 中央配置 */
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.08); /* 半透明背景 */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 16px;      /* 角を丸く */
+    backdrop-filter: blur(5px); /* ボカシ*/
+}
+
+#about h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 見出しの下線 */
+    padding-bottom: 8px;
+}
+
+#about p {
+    font-size: 1.05rem;
+    line-height: 1.8;         /* 行間を空ける*/
+    margin-bottom: 15px;
+}
            
