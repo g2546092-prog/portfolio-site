@@ -4,18 +4,22 @@ fetch("works.csv")
     })
     .then(function(data) {
 
-        var rows = data.trim().split("\n");
+        var rows = data.trim().split(/\r?\n/);
 
-        var headers = rows[0].split(",").map(function(h)  { return h.trim(); });
+        var headers = rows[0].split(",").map(function(h) {
+            return h.trim();
+        });
     
-        var works = rows.slice(1).map(function(row)  { 
+        var works = rows.slice(1).map(function(row) { 
 
-            var values = row.split(",");
+            var values = row.split(",").map(function(v) {
+                return v.trim();
+            });
 
             var work = {};
 
             headers.forEach(function(header, index) {
-                work[header] = values[index];
+                work[header] = values[index] || "";
             });
 
             return work;
