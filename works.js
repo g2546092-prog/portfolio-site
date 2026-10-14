@@ -133,7 +133,7 @@ function showWeather(code) {
         document.body.className = "weather-sunny";
 
     } else if (code >= 1 && code <= 3) {
-        icon.textContent = "☁";
+        icon.textContent = "🌤";
         document.body.className = "weather-cloudy";
 
     } else if (code >= 51 && code <= 67)  {
